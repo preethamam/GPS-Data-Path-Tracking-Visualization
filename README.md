@@ -1,4 +1,6 @@
 # Introduction
+[![View GPS data path tracking, visualization and distance on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/179834-gps-data-path-tracking-visualization-and-distance) [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=preethamam/GPS-Data-Path-Tracking-Visualization)
+
 It might be useful to plot the GPS data for path tracking. This repository is a simple MATLAB script for the GPS path tracking and visualization using the Google Maps. In addition, it provides the total path distance in kilometers and miles.
 
 # Quick Pipeline Visualization
