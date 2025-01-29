@@ -4,7 +4,10 @@
 It might be useful to plot the GPS data for path tracking. This repository is a simple MATLAB script for the GPS path tracking and visualization using the Google Maps. In addition, it provides the total path distance in kilometers and miles.
 
 # Quick Pipeline Visualization
-| Path tracking |
+| Path tracking with speed|
+| ------------- |
+| ![](assets/path_speed_plot.png) |
+| Simple path tracking |
 | ------------- |
 | ![](assets/path_plot.png) |
 
