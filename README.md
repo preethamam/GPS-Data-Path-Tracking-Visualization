@@ -8,6 +8,7 @@ It might be useful to plot the GPS data for path tracking. This repository is a 
 
 # Requirements
 MATLAB <br />
+Mapping Toolbox <br />
 Google Maps API Key
 
 # Acknowledgements
