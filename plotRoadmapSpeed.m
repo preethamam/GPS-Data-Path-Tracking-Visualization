@@ -22,15 +22,16 @@ function [totalDistKiloMeters, totalDistMiles] = plotRoadmapSpeed(gpsdat, latlon
     % plot route data using Google map
     % Please note that Google Maps API Key is mandatory!    
     
-    % Find the distance of the experiment
-    parfor i = 1:length(latlong)-1
-        vehiDistArray(i,1) = distdim(distance(gpsdat(i,1), gpsdat(i,2), ...
-                                       gpsdat(i+1,1), gpsdat(i+1,2)),...
-                                       'deg','kilometers');
-    end
+    % Find the distance of the experiment. Compute distances (in degrees) 
+    % between consecutive lat/long pairs.
+    d_deg = distance(gpsdat(1:end-1,1), gpsdat(1:end-1,2), ...
+                     gpsdat(2:end,1),   gpsdat(2:end,2));
 
-    totalDistKiloMeters = sum(vehiDistArray);
-    totalDistMiles = totalDistKiloMeters / 1.6;
+    % Convert distances from degrees to kilometers.
+    vehiDistArray = distdim(d_deg, 'deg', 'kilometers');
+
+    totalDistKiloMeters = sum(vehiDistArray);       % In kilometers
+    totalDistMiles = totalDistKiloMeters / 1.6;     % Convert to miles
     
     %--------------------------------------------------------------------------
     % Plot pavement distress classification and route data by Google map

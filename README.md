@@ -14,8 +14,7 @@ It might be useful to plot the GPS data for path tracking. This repository is a 
 # Requirements
 MATLAB <br />
 Mapping Toolbox <br />
-Parallel Computing Toolbox <br />
-Google Maps API Key
+[Google Maps API Key](https://developers.google.com/maps/documentation/javascript/get-api-key)
 
 # Citation
 GPS path and speed tracker MATLAB program was developed for the US Federal Highway Administration project this work is available to the public. If you use this code in your research, please use the following BibTeX entry to cite:

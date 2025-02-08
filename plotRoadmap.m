@@ -49,12 +49,13 @@ function [totalDist_KiloMeters, totalDist_Miles] = plotRoadmap(latlong, apiKey, 
     %% GPS data track-length    
     latlong = fliplr(latlong);
     
-    % Find the distance of the experiment
-    parfor i = 1:length(latlong)-1
-        vehiDistArray(i,1) = distdim(distance(latlong(i,1), latlong(i,2), ...
-                                       latlong(i+1,1), latlong(i+1,2)),...
-                                       'deg','kilometers');
-    end
+    % Find the distance of the experiment. Compute distances (in degrees) 
+    % between consecutive lat/long pairs.
+    d_deg = distance(latlong(1:end-1,1), latlong(1:end-1,2), ...
+                     latlong(2:end,1),   latlong(2:end,2));
+
+    % Convert distances from degrees to kilometers.
+    vehiDistArray = distdim(d_deg, 'deg', 'kilometers');
     
     totalDist_KiloMeters = sum(vehiDistArray);      % In kilometers
     totalDist_Miles = totalDist_KiloMeters / 1.6;   % Convert to miles

@@ -1,5 +1,5 @@
 %//%************************************************************************%
-%//%*                  Annotation Image Quality Checker                    *%
+%//%*                 GPS Path tracking and visualization                  *%
 %//%*                                                                      *%
 %//%*             Author(s): Dr. Preetham Manjunatha                       *%
 %//%*             Github link: https://github.com/preethamam               *%
